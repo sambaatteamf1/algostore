@@ -1,3 +1,4 @@
 [submodule "collection"]
 	path = collection
 	url = https://github.com/srdja/Collections-C.git
+	ignore = dirty

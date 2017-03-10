@@ -1,0 +1,14 @@
+MakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+bin
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+*.a
+*.so
+CMakeCache.txt
+.*.swp
