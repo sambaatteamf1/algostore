@@ -1,5 +1,4 @@
-# algostore
-Implementation of algorithms
+# Misc coding exercises
 
 ## Dependencies
 
@@ -15,4 +14,16 @@ Implementation of algorithms
    
    ```
    $ git submodule update --init --recursive
+   ```
+2. Build
+
+   ```
+   $ cmake .
+   $ make 	
+   ```
+
+3. Test
+
+   ```
+   $ ./bin/compare-sort-list 100
    ```
