@@ -25,5 +25,5 @@
 3. Test
 
    ```
-   $ ./bin/compare-sort-list 100
+   $ ./bin/insertion-sort-list 100
    ```
