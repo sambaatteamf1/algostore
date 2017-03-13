@@ -2,3 +2,6 @@
 	path = collection
 	url = https://github.com/srdja/Collections-C.git
 	ignore = dirty
+[submodule "uthash"]
+	path = uthash
+	url = https://github.com/troydhanson/uthash.git

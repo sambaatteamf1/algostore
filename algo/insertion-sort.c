@@ -20,7 +20,7 @@ Array * array_insertion_sort(Array * ar)
 		size_t index = array_iter_index(&unsorted_ai);
 		size_t curr_index = 0;
 
-		//fprintf(stdout, "unsorted index: %zu value:%d\n", index, *unsorted_next);
+		// fprintf(stdout, "unsorted index: %zu value:%d\n", index, *unsorted_next);
 		
 		array_iter_init(&sorted_ai, ar);
 
@@ -35,6 +35,7 @@ Array * array_insertion_sort(Array * ar)
 				/* swap elements */
 				array_remove_at(ar, index, (void *)&unsorted_next);
 				array_add_at(ar, (void *)unsorted_next, curr_index);
+				// print_int_array(ar);
 				break;
 				}
 

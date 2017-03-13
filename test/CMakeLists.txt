@@ -14,12 +14,14 @@ include_directories("../algo")
 include_directories("../util")
 
 add_executable(insertion-sort-list insertion-sort-list.c)
+add_executable(bubble-sort-list bubble-sort-list.c)
 
 link_directories("../algo")
 link_directories("../collection")
 link_directories("../util")
 
 target_link_libraries(insertion-sort-list algoc util collectc)
+target_link_libraries(bubble-sort-list algoc util collectc)
 
 set_target_properties(insertion-sort-list
     PROPERTIES

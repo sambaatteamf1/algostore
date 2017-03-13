@@ -2,7 +2,12 @@
 #define __ALGO_H
 
 #include "array.h"
+#include "list.h"
 
 extern Array * array_insertion_sort(Array * ar);
+extern List * list_bubble_sort(List *l);
+extern List * list_selection_sort(List *l);
+
+extern Array * array_bubble_sort(Array * ar);
 
 #endif

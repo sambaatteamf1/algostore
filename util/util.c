@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "array.h"
 #include <time.h>
+#include "list.h"
 
 
 Array * create_array(int nitems, int size) 
@@ -50,3 +51,54 @@ Array * create_int_array(int nitems)
 	return ar;
 	}
 
+
+void print_int_array(Array * ar) 
+	{
+	ArrayIter ai;
+	int *next;
+
+	array_iter_init(&ai, ar);
+
+	while (array_iter_next(&ai, (void *)&next) != CC_ITER_END) 
+		fprintf(stdout, "%d\n", *next);
+
+	return;
+	}
+
+
+List * create_int_list(int nitems)
+	{
+	List * l = NULL;
+	time_t t;
+	int count = 0;
+
+	if (list_new(&l) != CC_OK)
+		{
+		return NULL;							
+		}
+
+	srandom(time(&t));		
+
+	while(count < nitems)
+		{
+		int * value = (int *)malloc(sizeof(int));
+		*value = random() % nitems;
+		list_add(l, value);
+		++count;			
+		}	
+
+	return l;		
+	}
+
+void print_int_list(List * l) 
+	{
+	ListIter li;
+	int *next;
+
+	list_iter_init(&li, l);
+
+	while (list_iter_next(&li, (void *)&next) != CC_ITER_END) 
+		fprintf(stdout, "%d\n", *next);
+
+	return;
+	}
