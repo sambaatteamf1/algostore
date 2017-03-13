@@ -13,17 +13,16 @@ include_directories("../collection/src/include")
 include_directories("../algo")
 include_directories("../util")
 
-add_executable(insertion-sort-list insertion-sort-list.c)
-add_executable(bubble-sort-list bubble-sort-list.c)
+add_executable(sort-test sort-test.c)
 
 link_directories("../algo")
 link_directories("../collection")
 link_directories("../util")
 
-target_link_libraries(insertion-sort-list algoc util collectc)
-target_link_libraries(bubble-sort-list algoc util collectc)
+target_link_libraries(sort-test algoc util collectc)
 
-set_target_properties(insertion-sort-list
+
+set_target_properties(sort-test
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
