@@ -140,6 +140,10 @@ int main (int argc, char * argv[])
 			{
 			array_insertion_sort(ar);	
 			}
+		else if (!strcmp(algo, "heap"))
+			{
+			array_heap_sort(ar);	
+			}			
 		else
 			{
 			return -1;

@@ -37,15 +37,24 @@ Array * create_int_array(int nitems)
 	ArrayIter ai;
 	int *next;
 	time_t t;
+	int defArr[] = { 5, 4, 9, 3, 2, 1, 8, 7, 0, 6 };
+	int index;
+
 	Array * ar = create_array(nitems, sizeof(int));
 
 	srandom(time(&t));
 
 	array_iter_init(&ai, ar);
 
+	index = 0;
 	while (array_iter_next(&ai, (void *)&next) != CC_ITER_END) 
 		{
-		*next = random() % nitems;
+		if (index < 10)
+			*next = defArr[index];
+		else	
+			*next = random() % nitems;
+
+		++index;
 		}
 
 	return ar;

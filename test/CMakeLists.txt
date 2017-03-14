@@ -19,7 +19,7 @@ link_directories("../algo")
 link_directories("../collection")
 link_directories("../util")
 
-target_link_libraries(sort-test algoc util collectc)
+target_link_libraries(sort-test algoc util collectc m)
 
 
 set_target_properties(sort-test
