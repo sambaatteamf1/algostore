@@ -12,4 +12,5 @@ extern Array * array_bubble_sort(Array * ar);
 extern Array * array_insertion_sort(Array * ar);
 extern Array * array_selection_sort(Array * ar);
 extern Array * array_heap_sort(Array * ar);
+extern Array * array_merge_sort(Array * ar);
 #endif

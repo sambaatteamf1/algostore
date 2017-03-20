@@ -88,6 +88,9 @@ int main (int argc, char * argv[])
         }
 
 
+	if (nitems <= 0)
+		return -1;
+
 	if (!dflag)
 		strcpy(ds, "dynamic-array");
 
@@ -144,6 +147,10 @@ int main (int argc, char * argv[])
 			{
 			array_heap_sort(ar);	
 			}			
+		else if (!strcmp(algo, "merge"))
+			{
+			ar = array_merge_sort(ar);
+			}						
 		else
 			{
 			return -1;
